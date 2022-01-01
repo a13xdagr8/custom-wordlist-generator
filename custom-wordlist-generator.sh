@@ -6,6 +6,7 @@
 # colors
 yel=$'\e[1;33m'
 gre=$'\e[1;32m'
+red=$'\e[1;31m'
 cya=$'\e[0;36m'
 end=$'\e[0m'
 
@@ -32,8 +33,9 @@ sleep 1
 # check john.conf for korelogic rules
 if [[ $(grep -i 'korelogic' /etc/john/john.conf | wc -l) -le 10 ]]; then
     echo
-    echo "${yel}[w] KoreLogic Rules not found in john.conf${end}"
+    echo "${red}[w] KoreLogic Rules not found in john.conf${end}"
     echo "${yel}[i] Append /opt/custom-wordlist-generator/korelogic/kore-logic-rules-full-separate.txt to /etc/john/john.conf and re-run this script.${end}"
+    echo "${gre}[*] Do not forget to backup john.conf first. [e.g., sudo cp /etc/john/john.conf /etc/john/john.conf.bak]${end}"
     exit 1
 fi
 

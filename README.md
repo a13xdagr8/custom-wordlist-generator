@@ -1,10 +1,10 @@
 # Custom Wordlist Generator
 
-Wordlist Generator script.
+Custom Wordlist Generator script that uses Korelogic and OneRuleToRuleThemAll rulesets.
 
 ## Description
 
-Custom wordlist generator that can be used for PenTest engagements or any other engagements. It runs a list of words through hashcat and john rules with the option to scrape a web site using cewl.
+Custom wordlist generator that can be used for PenTest engagements or any other engagements. It runs a list of words through hashcat and john using Korelogic and OneRuleToRuleThemAll rulesets with the option to scrape a web site using cewl.
 
 ## Getting Started
 
@@ -22,7 +22,7 @@ Custom wordlist generator that can be used for PenTest engagements or any other 
 
 ### Executing program
 
-1. `cd` to custom-wordlist-generator
+1. `cd` to custom-wordlist-generator directory
 2. `sudo ./custom-wordlist-generator.sh`
 
 ## Help
@@ -44,3 +44,9 @@ Because of the way the `sort` command works, sort will take a while to complete.
 *Example*
 
 ![Example](images/example.png)
+
+## References
+
+* [CeWl](https://www.kali.org/tools/cewl/)
+* [OneRuleToRuleThemAll](https://github.com/NotSoSecure/password_cracking_rules)
+* [Korelogic](https://github.com/SpiderLabs/KoreLogic-Rules)
